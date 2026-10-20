@@ -1,0 +1,34 @@
+{% load static %}
+{% static "images" as imageURL %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmania University Results - 2026</title>
+    <link rel="stylesheet" href="{% static 'style-result.css' %}">
+</head>
+
+<body>
+    <div class="results">
+        <div class="top-results">
+            <div class="form">
+                <form action="validate" method="post">
+                    {% csrf_token %}
+                    <span>Enter Hall Ticket No. : </span>
+                    <input type="text" name="htno">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="bottom-results">
+            <h4>
+                Please Enter 12 Digit Hall Ticket Number Ex: 172419853102, 172420853107.
+            </h4>
+        </div>
+    </div>
+</body>
+
+</html>

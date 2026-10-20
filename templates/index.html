@@ -1,0 +1,191 @@
+{% load static %}
+{% static "images" as imageURL %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmania University</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="top-header">
+        <div class="top-left-header">
+            <a href="">New Appointments</a>
+            <a href="">University E-Mail</a>
+            <a href="">Almanac</a>
+            <a href="">University Brochure</a>
+        </div>
+        <div class="top-right-header">
+            <a href="">Download Forms</a>
+            <a href="">Contact Us</a>
+            <a href="">Screen Reader</a>
+            <select>
+                <option>Select Language</option>
+                <option>Hindi</option>
+                <option>French</option>
+                <option>German</option>
+            </select>
+            <span>A+</span>
+            <span>A</span>
+            <span>A-</span>
+            <a href="" class="old-site">OLD SITE</a>
+        </div>
+    </div>
+    <div class="middle-header">
+        <img src="{% static 'images/logo.png' %}">
+    </div>
+    <div class="bottom-header">
+        <a href="">Home</a>
+        <a href="">About Us</a>
+        <a href="">Administration</a>
+        <a href="">Academics</a>
+        <a href="">Admissions & Fee</a>
+        <a href="">Research</a>
+        <a href="">Student Life</a>
+        <a href="">Alumni</a>
+        <a href="">E-Resources</a>
+        <a href="">IQAC</a>
+        <a href="">Information Corner</a>
+        <a href="">Contact Us</a>
+    </div>
+    <div class="banner">
+        <p>
+            Examination
+        </p>
+        <h1>
+            Examination Results
+        </h1>
+    </div>
+    <div class="content">
+        <div class="content-left">
+            <h1>
+                Examination Results
+            </h1>
+            <table>
+                <tr>
+                    <td class="theading">
+
+                    </td>
+                    <td class="theading">
+                        Result Name
+                    </td>
+                    <td class="theading">
+                        Date of Release
+                    </td>
+                </tr>
+                {% for i in list_of_results %}
+                <tr>
+                    <td>
+                        <i class="fa fa-arrow-circle-o-right"></i>
+                    </td>
+                    <td>
+                        <a href="marks">
+                            {% if i.name == 1 %}
+                            B.Tech I year I sem
+                            {% endif %}
+                            {% if i.name == 2 %}
+                            B.Tech I year II sem
+                            {% endif %}
+                            {% if i.name == 3 %}
+                            B.Tech II year I sem
+                            {% endif %}
+                            {% if i.name == 4 %}
+                            B.Tech II year II sem
+                            {% endif %}
+                            {% if i.name == 5 %}
+                            B.Tech III year I sem
+                            {% endif %}
+                            {% if i.name == 6 %}
+                            B.Tech III year II sem
+                            {% endif %}
+                            {% if i.name == 7 %}
+                            B.Tech IV year I sem
+                            {% endif %}
+                            {% if i.name == 8 %}
+                            B.Tech IV year II sem
+                            {% endif %}
+                        </a>
+                    </td>
+                    <td>
+                        {{i.current_date}}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="content-right">
+            <div class="quicklink">
+                <h1>
+                    Quick Links
+                </h1>
+                <a href=""><i class="fa fa-dot-circle-o"></i>Staff Login</a>
+                <a href=""><i class="fa fa-dot-circle-o"></i>University Email</a>
+                <a href=""><i class="fa fa-dot-circle-o"></i>Download Forms</a>
+                <a href=""><i class="fa fa-dot-circle-o"></i>Staff</a>
+                <a href=""><i class="fa fa-dot-circle-o"></i>Common Gateway for e-Journals</a>
+                <a href=""><i class="fa fa-dot-circle-o"></i>College Login</a>
+            </div>
+        </div>
+    </div>
+    <div class="top-footer">
+        <div class="cols">
+            <p>
+                Osmania University <br> Hyderabad, Telangana
+            </p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60909.6205995301!2d78.526546!3d17.418923000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9973bb0015e9%3A0x2b40415d8a716d20!2sOsmania%20University!5e0!3m2!1sen!2sus!4v1787667576891!5m2!1sen!2sus"
+                width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="cols">
+            <h3>
+                About Us
+            </h3>
+            <a href="">Origin and History</a>
+            <a href="">University Profile</a>
+            <a href="">Vision & Mission</a>
+            <a href="">OU Logo</a>
+            <a href="">Distinguished Alumni</a>
+            <a href="">Accreditation</a>
+        </div>
+        <div class="cols">
+            <h3>
+                Examinations
+            </h3>
+            <a href="">Apply Online for Certificates</a>
+            <a href="">Examination Pressnotes</a>
+            <a href="">Examination Timetables</a>
+            <a href="">Examination Results</a>
+            <a href="">Syllabus</a>
+            <a href="">Almanacs</a>
+        </div>
+        <div class="cols">
+            <h3>
+                E-Resources
+            </h3>
+            <a href="">E-Books</a>
+            <a href="">Constituent Colleges</a>
+            <a href="">e-ShodhSindhu e-Journals</a>
+            <a href="">SAGE e-Journals</a>
+            <a href="">Indian e-Journals</a>
+            <a href="">Library OPAC</a>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <p>
+            Copyright All Right Reserved 2024, Osmania University
+        </p>
+        <div class="icons">
+            <p>
+                ICONS
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

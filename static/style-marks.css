@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(250, 240, 216);
+}
+.marksHeading{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.marks{
+    width: 80%;
+    margin: auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.center{
+    text-align: center;
+    font-weight: bold;
+}
+.center-nobold{
+    text-align: center;
+}
+.theading{
+    background-color: rgb(253, 217, 134);
+}
+tr{
+    background-color: white;
+}
+.p1,.p3{
+    width: 20%;
+}
+.p2,.p4{
+    width: 30%;
+    font-weight: bold;
+}
+.pd{
+    margin-bottom: 20px;
+}
+.button{
+    width: fit-content;
+    margin: 20px auto;
+}
+button{
+    padding: 10px 40px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}

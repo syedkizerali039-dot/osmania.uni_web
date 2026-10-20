@@ -1,0 +1,88 @@
+{% load static %}
+{% static "images" as imageURL %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'style-marks.css' %}">
+    </head>
+    <body>
+        <div class="marks">
+            <table border="1" class="pd">
+                <tr>
+                    <td colspan="4" class="center theading">
+                        Personal Details
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p1">Hall Ticket No.</td>
+                    <td class="p2" style="color: red">{{dataMarks.htno}}</td>
+                    <td class="p3">Gender</td>
+                    {% if dataMarks.gender == 0 %}
+                    <td class="p4">Male</td>
+                    {% else %}
+                    <td class="p4">Female</td>
+                    {%endif%}
+                </tr>
+                <tr>
+                    <td class="p1">Name</td>
+                    <td class="p2">{{dataMarks.name}}</td>
+                    <td class="p3">Father's name</td>
+                    <td class="p4">{{dataMarks.fname}}</td>
+                </tr>
+                <tr>
+                    <td class="p1">Course</td>
+                    <td class="p2">-</td>
+                    <td class="p3">Medium</td>
+                    <td class="p4">ENGLISH</td>
+                </tr>
+            </table>
+            <table border="1" class="md">
+                <tr>
+                    <td colspan="2" class="center theading">
+                        Marks Details
+                    </td>
+                </tr>  
+                <tr>
+                    <td class="center">Subject Name</td>
+                    <td class="center">Subject Marks</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">M1</td>
+                    <td class="center-nobold">{{dataMarks.subject1}}</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">English</td>
+                    <td class="center-nobold">{{dataMarks.subject2}}</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">MM</td>
+                    <td class="center-nobold">{{dataMarks.subject3}}</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">Physics</td>
+                    <td class="center-nobold">{{dataMarks.subject4}}</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">Chemistry</td>
+                    <td class="center-nobold">{{dataMarks.subject5}}</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">CPDS</td>
+                    <td class="center-nobold">{{dataMarks.subject6}}</td>
+                </tr>
+                <tr>
+                    <td class="center-nobold">Total</td>
+
+                    <td class="center-nobold">{{dataMarks.subject1|add:dataMarks.subject2|add:dataMarks.subject3|add:dataMarks.subject4|add:dataMarks.subject5|add:dataMarks.subject6}}</td>
+                </tr>
+            </table>
+            <div class="button">
+                <button>PRINT</button>
+            </div>
+        </div>
+    </body>
+</html>
